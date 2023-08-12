@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    
+        <div class="chat-box">
+            <div class="message">
+                <div class="message-content">Привет! Как дела?</div>
+            </div>
+            <div class="message">
+                <div class="message-content">Привет! Всё хорошо, спасибо!</div>
+            </div>
+            <!-- Добавьте здесь новые сообщения по мере необходимости -->
+        </div>
+        <div class="message-input">
+            <input type="text" id="message-input" placeholder="Введите сообщение...">
+            <button id="send-button">Отправить</button>
+        </div>
+    <script src="{% static 'js/chat.js' %}"></script>
+{% endblock %}
+</body>
+</html>

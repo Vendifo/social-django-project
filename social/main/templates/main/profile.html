@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+            <div class="profile-info">
+                <div class="profile-images">
+                    <div class="image-container">
+                        <img class="profile-img1" src="{% static 'img/Rectangle 28.png' %}" alt="">
+                        <img class="overlay-avatar" src="{% static 'img/Ellipse 8.png' %}" alt="Avatar">
+                    </div>
+                    <div class="image-container">
+                        <img class="profile-img2" src="{% static 'img/Rectangle 30.png' %}" alt="">
+                    </div>
+                </div>
+                    <h2 class="profile-name">Имя пользователя</h2>
+                    <p class="profile-bio">О себе: Lorem ipsum dolor sit amet...</p>
+            </div>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Raleway:wght@600&family=Roboto+Condensed:wght@300;400&family=Seaweed+Script&display=swap" rel="stylesheet">
+    {% block title %}<title></title>{% endblock %}
+</head>
+<body>
+    <div class="header">
+        <header class="header-text">
+            <a class="header-namelogourl" href="{% url 'main' %}">
+                <h1 class="header-namelogo">Social</h1>
+            </a>
+            <a href="{% url 'profile' %}" class="avatar-container">
+                <img src="{% static 'img/account_circle.svg' %}" alt="" class="avatar-profile">
+            </a>
+        </header>
+    </div>
+    <div class="wrapper">
+        <aside class="sidebar">
+            <ul class="menu">
+                <li><a href="{% url 'main' %}"><span class="menu-text">Главная</span></a></li>
+                <li><a href="{% url 'users' %}"><span class="menu-text">Диалоги</span></a></li>
+                <li><a href="{% url 'dialogue' %}"><span class="menu-text">Пользователи</span></a></li>
+            </ul>
+        </aside>
+    {% block content %}
+    {% endblock %}
+    </div>
+</body>
+</html>
