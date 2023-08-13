@@ -18,8 +18,3 @@ def dialogue(request):
     }
     return render(request, 'main/dialogue.html', context)
 
-def profile(request):
-    context = {
-        'title':'Профиль'
-    }
-    return render(request, 'main/profile.html', context)

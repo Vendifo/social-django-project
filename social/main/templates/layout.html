@@ -16,7 +16,7 @@
             <a class="header-namelogourl" href="{% url 'main' %}">
                 <h1 class="header-namelogo">Social</h1>
             </a>
-            <a href="{% url 'profile' %}" class="avatar-container">
+            <a href="{% url 'profiles' %}" class="avatar-container">
                 <img src="{% static 'img/account_circle.svg' %}" alt="" class="avatar-profile">
             </a>
         </header>
@@ -25,8 +25,8 @@
         <aside class="sidebar">
             <ul class="menu">
                 <li><a href="{% url 'main' %}"><span class="menu-text">Главная</span></a></li>
-                <li><a href="{% url 'users' %}"><span class="menu-text">Диалоги</span></a></li>
-                <li><a href="{% url 'dialogue' %}"><span class="menu-text">Пользователи</span></a></li>
+                <li><a href="{% url 'dialogue' %}"><span class="menu-text">Диалог</span></a></li>
+                <li><a href="{% url 'users' %}"><span class="menu-text">Пользователи</span></a></li>
             </ul>
         </aside>
     {% block content %}
