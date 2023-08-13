@@ -1,0 +1,315 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+html{height:100%}
+body{line-height:1}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url("../img/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.wrapper {
+    position: relative;
+    max-height: 100vh; /* Занимает всю высоту экрана */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1354px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+
+/*----------------------------------------------header----------------------------- */
+
+.header {
+    
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 58px;
+    background-color: #434343;
+    z-index: 1;
+}
+
+.avatar-container {
+    margin-left: auto; /* Это прижмет контейнер к правому краю */
+}
+
+.avatar-profile {
+    width: 40px;
+    height: 40px;
+    margin-left: -200px;
+    margin-top: 10px;
+}
+
+.header-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 200px;
+}
+
+.logo-avatar-container {
+    display: flex;
+    align-items: center;
+    
+}
+
+.header-namelogourl{
+    text-decoration: none;
+
+}
+
+.header-namelogo {
+    margin: 0;
+    width: 148px;
+    height: 49px;
+    font-size: 60px;
+    font-family: Seaweed Script;
+    color: #979494;
+    text-decoration: none;
+}
+
+/*--------------------------------------------aside-----------------------------------*/
+
+.sidebar {
+    position: fixed;
+    width: 250px;
+    padding: 20px;
+    padding-top: 100px;
+}
+
+.menu li {
+    margin-bottom: 15px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-text {
+    
+    padding: 7px 10px;
+    border-radius: 15px;
+    display: block;
+    font-size: 20px;
+    
+}
+
+/*--------------------------------------------main-----------------------------------*/
+
+.content {
+    color: #fff;
+    padding-top: 50px;
+}
+
+.content-container{
+    padding-top: 50px;
+}
+
+.centered-block {
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 700px; /* При необходимости задайте максимальную ширину */
+    border-radius: 5px;
+}
+
+.title{
+    background-color: #434343;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.content-text{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 27px;
+    background-color: rgba(53, 83, 82, 95%);
+    border-radius: 10px;
+    font-size: 20px;
+    
+}
+
+/*------------------------------------------chat-------------------------------------------*/
+
+.chat-box {
+    padding-left: 320px;
+    max-width: 700px;
+    border-radius: 10px;
+    margin-top: 100px;
+    overflow-y: auto; /* Добавляем вертикальную прокрутку при необходимости */
+    max-height: calc(100vh - 158px); /* Ограничиваем максимальную высоту, учитывая заголовок */
+}
+
+
+.message-input {
+    display: flex;
+    align-items: flex-end; /* Выравнивание по нижнему краю */
+    max-width: 700px;
+    padding-left: 320px;
+}
+
+.message-content{
+    color: #fff;
+    margin-top: 20px;
+    
+    word-wrap: break-word; /* Перенос слов на следующую строку */
+    overflow-wrap: break-word; /* Альтернативный синтаксис для переноса слов */
+}
+
+#message-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+}
+
+#send-button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ca0000;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#send-button:hover {
+    background-color: #d7dee6;
+}
+
+/* Стилизация полосы прокрутки внутри .chat-box */
+.chat-box {
+    /* Другие стили .chat-box */
+    overflow-y: auto;
+    scrollbar-width: thin; /* Для браузеров, поддерживающих новые стандарты */
+    scrollbar-color: #555555 rgba(255, 255, 255, 0.2); /* Цвет полосы и цвет фона */
+}
+
+/* Стилизация полосы прокрутки для браузеров, поддерживающих старые стандарты */
+.chat-box::-webkit-scrollbar {
+    width: 8px; /* Ширина полосы прокрутки */
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background-color: #555555; /* Цвет полосы прокрутки */
+    border-radius: 4px; /* Радиус границы полосы прокрутки */
+}
+
+.chat-box::-webkit-scrollbar-thumb:hover {
+    background-color: #333333; /* Цвет полосы прокрутки при наведении */
+}
+
+.chat-box::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.2); /* Цвет фона полосы прокрутки */
+}
+
+/*--------------------------------Users------------------------------------*/
+
+/* Добавьте стили для раздела с пользователями */
+.users {
+    margin: 0 auto;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Стили для аватарки */
+.avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #000000; /* Цвет аватарки */
+    border-radius: 50%; /* Делаем круглую форму */
+    margin-right: 10px; /* Отступ между аватаркой и именем пользователя */
+}
+
+
+.users-list {
+    list-style: none;
+    padding: 0;
+    width: 1000px;
+}
+
+.users-item {
+    height: 50px;
+    line-height: 50px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    padding: 0 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.users-item:last-child {
+    margin-bottom: 0;
+}
+
+.user-link {
+    color: #fff; /* Цвет ссылки */
+    text-decoration: none; /* Убираем подчеркивание */
+    display: flex; /* Делаем ссылку блочным элементом с возможностью выравнивания */
+    align-items: center; /* Выравниваем элементы вертикально по центру */
+}
+
+.user-name {
+    font-size: 18px;
+}
+
+
+/*------------------------------------Profile----------------------------------*/
+
+
+
+.image-container {
+    position: absolute;
+}
+
+.profile-img2 {
+    position: absolute;
+    top: 210px;
+    
+}
+
+.profile-info {
+    position: absolute;
+    left: 15%;
+    top: 100px;
+}
+
+.profile-name {
+    position: absolute;
+    color: #fff;    
+    top: 250px;
+    left: 200px;
+    width: 200px;
+    font-size: 20px;
+}
+
+
+.overlay-avatar {
+    position: absolute;
+    top: 150px;
+    left: 30px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 50%;
+    z-index: 1; /* Place the overlay above the profile image */
+    opacity: 0.8; /* Adjust the opacity as needed */
+}
